@@ -18,8 +18,8 @@ Sample I2C transaction using the terminal are below:
 ![image](https://github.com/user-attachments/assets/d0aa7401-cccf-4d5a-8f8e-ac50729090e5)
 
 Some challenges I encountered: 
-*I cannot manually send start and stop conditions.
-*Each call of the ioctl function automatically generates a start and stop condition.
+*  I cannot manually send start and stop conditions.
+*  Each call of the ioctl function automatically generates a start and stop condition.
 
 When communicating with Lattice devices, there should be no stop condition after a read command during a read operation, as improper setup of ioctl can cause readout failures. To ensure correct readout, I used the i2c_write_and_read() function, which performs a write followed by a read operation. This is done by defining an i2c_rdwr_ioctl_data structure and specifying the sequence of operations. See below for my function:
 
