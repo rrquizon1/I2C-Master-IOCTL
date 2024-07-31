@@ -8,6 +8,7 @@ To run the design on your raspberry pi:
 2. Run the program using ./rhodz_i2c
 
 The functions are tested on MachXO3LF starter kit. Sample waveform transactions are below:
+
 Device ID Read:
 ![image](https://github.com/user-attachments/assets/3f613826-e4c4-4563-ada2-e5de3124f135)
 Feabits read:
