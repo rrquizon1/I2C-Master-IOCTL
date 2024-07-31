@@ -41,7 +41,7 @@ int i2c_write_byte(int length, unsigned char *data_bytes){
     
     // First message: Write command bytes (without stop)
     msgs[0].addr = DEVICE_ADDR;
-    msgs[0].flags = 0;  // No stop
+    msgs[0].flags = 0;  //Write
     msgs[0].len = length;
     msgs[0].buf = data_bytes;
     
